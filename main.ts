@@ -1,7 +1,7 @@
-import fs from 'node:fs';
-import path from 'node:path';
+// Warning Label for Humans: one safety label every human should carry, written to /output/entry.txt.
+import { mkdirSync, writeFileSync } from "node:fs";
 
-const entry = `WARNING: this human contains strong opinions, 47 unfinished side projects, and a sleep schedule held together by alarms. Approach with snacks.`;
-const outDir = '/output';
-fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, 'entry.txt'), entry);
+// The warning line, composed fresh for this bounty.
+const entry = "WARNING: May suddenly start a sentence with 'no offense' and then say the most offensive thing you have ever heard.";
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", entry);
